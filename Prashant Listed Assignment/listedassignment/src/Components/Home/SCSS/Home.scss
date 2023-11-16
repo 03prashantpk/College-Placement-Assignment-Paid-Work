@@ -1,0 +1,738 @@
+$font-family-montserrat: 'Montserrat', sans-serif;
+$font-family-lato: 'Lato', sans-serif;
+$color-black: #1C1D1F;
+$color-white: #fff;
+$color-highlight: #FFCE56;
+$color-secondary: #9a9a9a;
+$color-bg: #f5f5f5;
+$color-input-bg: #fff;
+$color-link: #346bd5;
+$color-secondary-text : #666666;
+$color-tertiary-text: #999999;
+$color-primary-text: #666666;
+$color-primary-text-hover: #242424;
+
+$color-bg-image: url('https://enally.in/images/bg.png');
+
+* {
+  transition-duration: 0.6s;
+}
+
+body {
+  background-color: $color-bg;
+}
+
+.home {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main {
+  width: 75%;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .right {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding-right: 20px;
+    }
+
+    .search {
+      background-color: $color-input-bg;
+      padding: 5px 8px;
+      border-radius: 8px;
+      font-family: $font-family-lato;
+
+      &:hover i {
+        transform: scale(1.1);
+        transform: rotate(-30deg);
+      }
+
+      i {
+        color: $color-secondary;
+      }
+
+      input {
+        border: none;
+        outline: none;
+      }
+    }
+
+    .notification {
+      padding: 4px 10px;
+      border-radius: 8px;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.3);
+      }
+    }
+
+    .user {
+      background-color: $color-white;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      align-items: center;
+
+      img {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+
+        &:hover {
+          transform: scale(1.3);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .user-details {
+      position: fixed;
+      right: 1%;
+      top: 6%;
+      z-index: 2;
+      text-align: center;
+      min-width: 180px;
+      background-color: $color-black;
+      color: $color-white;
+      border-radius: 22px;
+      padding: 1% 2%;
+      line-height: 10px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      animation: popIn 0.3s ease-in-out;
+
+      button {
+        border: none;
+        background-color: $color-highlight;
+        color: $color-black;
+        padding: 6px 10px;
+        border-radius: 4px;
+        margin-top: 20px;
+
+        &:hover {
+          background-color: $color-white;
+          color: $color-black;
+          cursor: pointer;
+        }
+      }
+
+      h5 {
+        text-align: left;
+      }
+
+      .otherUsers {
+        margin-top: 20px;
+        line-height: 22px;
+
+        .userItem {
+          display: flex;
+          align-items: center;
+
+          .userIndex {
+            margin-right: 10px;
+          }
+
+          .userImage {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-right: 5px;
+          }
+
+          .userName {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .name {
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 600;
+        color: $color-highlight;
+      }
+
+      .email {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+    }
+
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    padding-top: 10px;
+
+    .card {
+      padding: 18px 20px;
+      width: 210px;
+      border-radius: 12px;
+      font-family: $font-family-lato;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      line-height: 12px;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      p:nth-child(2) {
+        font-size: 22px;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      i {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        font-size: 30px;
+      }
+    }
+
+    .card:nth-child(1) {
+      background-color: #DDEFE0;
+
+      &:hover i {
+        transform: scale(1.2);
+        color: $color-highlight;
+      }
+    }
+
+    .card:nth-child(2) {
+      background-color: #F4ECDD;
+
+      &:hover i {
+        transform: scale(1.2);
+        color: $color-highlight;
+      }
+    }
+
+    .card:nth-child(3) {
+      background-color: #EFDADA;
+
+      &:hover i {
+        transform: scale(1.2);
+        color: $color-highlight;
+      }
+    }
+
+    .card:nth-child(4) {
+      background-color: #DEE0EF;
+
+      &:hover i {
+        transform: scale(1.2);
+        color: $color-highlight;
+      }
+    }
+  }
+
+  .Chart {
+    margin-top: 2%;
+    background-color: $color-white;
+    width: 91.5%;
+    padding: 1% 2%;
+    border-radius: 22px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+    .line-data {
+      height: 400px;
+    }
+
+    .head {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .left {
+        line-height: 10px;
+
+        p {
+          font-weight: 700;
+          font-family: $font-family-montserrat;
+        }
+      }
+    }
+  }
+
+  .Stats {
+    margin: 2% 0%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 95.2%;
+
+    .top-product {
+      background-color: $color-white;
+      box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+      border-radius: 22px;
+      padding: 2% ;
+      width: 45%;
+    }
+    .Schedules {
+      width: 45%;
+      background-color: $color-white;
+      border-radius: 22px;
+      padding: 2%;
+      box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+
+      .head {
+        p:nth-child(2) {
+          &:hover {
+            color: $color-highlight;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .data1 {
+        margin: 2.5% 1%;
+        line-height: 4px;
+        border-left: #9BDD7C 4px solid;
+        padding: 1px 10px;
+
+        p:nth-child(1) {
+          color: $color-secondary-text;
+          font-family: $font-family-lato;
+          font-size: 16px;
+        }
+
+        p:nth-child(2) {
+          color: $color-tertiary-text;
+          font-family: $font-family-lato;
+          font-size: 13px;
+        }
+
+        p:nth-child(3) {
+          color: $color-tertiary-text;
+          font-family: $font-family-lato;
+          font-size: 12px;
+        }
+      }
+
+      .data2 {
+        margin: 2.5% 1%;
+        line-height: 4px;
+        border-left: #6972C3 4px solid;
+        padding: 1px 10px;
+
+        p:nth-child(1) {
+          color: $color-secondary-text;
+          font-family: $font-family-lato;
+          font-size: 16px;
+        }
+
+        p:nth-child(2) {
+          color: $color-tertiary-text;
+          font-family: $font-family-lato;
+          font-size: 13px;
+        }
+
+        p:nth-child(3) {
+          color: $color-tertiary-text;
+          font-family: $font-family-lato;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.Chart,
+.Stats,
+.piechart,
+.Schedules,
+.credit {
+  animation: popIn 0.6s ease-in-out;
+}
+
+.home {
+  .card {
+    animation: popIn 0.6s ease-in-out;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+select {
+  background-color: $color-white;
+  border: none;
+  color: $color-secondary-text;
+
+  &:hover {
+    color: $color-primary-text-hover;
+    cursor: pointer;
+  }
+
+  option {
+    background-color: #242424;
+    color: $color-white;
+
+    &:hover {
+      background-color: #346bd5;
+      color: $color-black;
+    }
+  }
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p:nth-child(1) {
+    font-weight: 700;
+    font-family: $font-family-montserrat;
+  }
+
+  p:nth-child(2) {
+    color: $color-primary-text;
+    font-weight: 400;
+    font-family: $font-family-lato;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.credit {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #878787;
+  line-height: 0px;
+  
+  a{
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
+
+/* Responsive Code for Mobile Devices */
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        width: 100%;
+    }
+    @keyframes backgroundChange {
+        0% {
+            background-position: top right;
+            animation-delay: 0.6s;
+        }
+    
+        100% {
+            background-position: top left;
+            animation-delay: 0.6s;
+        }
+    }
+    .main {
+        width: 96%;
+        margin: 2% 4%;
+        background-image: $color-bg-image;
+        animation: backgroundChange 30s infinite ease-in-out;
+
+        .line-data {
+            margin: 1% 4%;
+        }
+
+        .Stats {
+            display: block;
+            margin: 2% 3%;
+
+            .top-product {
+                width: 90%;
+                margin: 2% 0%;
+            }
+
+            .Schedules {
+                width: 90%;
+                margin: 2% 0%;
+            }
+        }
+
+        .navbar {
+            padding: 0px 6px;
+
+            .right {
+                gap: 10px;
+            }
+        }
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: stretch;
+
+        .card {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .navbar {
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            .right {
+                padding-right: 0;
+            }
+
+            .search {
+                margin-top: 10px;
+                width: 100%;
+
+                input {
+                    width: 80%;
+                }
+            }
+    }
+}
+
+
+@media screen and (max-width: 1372px) and (min-width: 774px) {
+    .main {
+      width: 65%;
+  
+      .navbar .right {
+        gap: 10px;
+        padding-right: 10px;
+      }
+  
+      .navbar .search i {
+        transform: scale(1);
+        transform: rotate(0deg);
+      }
+  
+      .navbar .user img:hover {
+        transform: scale(1);
+      }
+  
+      .navbar .user-details {
+        top: 8%;
+        min-width: 150px;
+  
+        button {
+          padding: 4px 8px;
+          margin-top: 15px;
+          font-size: 12px;
+        }
+  
+        .otherUsers {
+          margin-top: 15px;
+          line-height: 18px;
+  
+          .userItem {
+            .userIndex {
+              margin-right: 5px;
+            }
+  
+            .userImage {
+              width: 20px;
+              height: 20px;
+              margin-right: 3px;
+            }
+  
+            .userName {
+              font-size: 12px;
+            }
+          }
+        }
+  
+        .name {
+          font-size: 15px;
+        }
+  
+        .email {
+          font-size: 12px;
+        }
+  
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+  
+      .card-container .card {
+        width: 160px;
+        margin: 1% 0%;
+  
+        p:nth-child(2) {
+          font-size: 18px;
+        }
+  
+        i {
+          font-size: 26px;
+        }
+      }
+  
+      .Chart {
+        width: 90%;
+  
+        .line-data {
+          height: 300px;
+        }
+      }
+  
+      .Stats .top-product,
+      .Stats .Schedules {
+        width: 45%;
+      }
+  
+      .Stats .data1,
+      .Stats .data2 {
+        margin: 1.5% 1%;
+      }
+  
+      .head p:nth-child(2) {
+        font-size: 12px;
+      }
+    }
+  }
+  
+
+  @media screen and (max-width: 940px) and (min-width: 767px) {
+    .main {
+      width: 55%;
+  
+      .navbar .right {
+        gap: 10px;
+        padding-right: 10px;
+      }
+  
+      .navbar .search i {
+        transform: scale(1);
+        transform: rotate(0deg);
+      }
+  
+      .navbar .user img:hover {
+        transform: scale(1);
+      }
+  
+      .navbar .user-details {
+        top: 8%;
+        min-width: 150px;
+  
+        button {
+          padding: 4px 8px;
+          margin-top: 15px;
+          font-size: 12px;
+        }
+  
+        .otherUsers {
+          margin-top: 15px;
+          line-height: 18px;
+  
+          .userItem {
+            .userIndex {
+              margin-right: 5px;
+            }
+  
+            .userImage {
+              width: 20px;
+              height: 20px;
+              margin-right: 3px;
+            }
+  
+            .userName {
+              font-size: 12px;
+            }
+          }
+        }
+  
+        .name {
+          font-size: 15px;
+        }
+  
+        .email {
+          font-size: 12px;
+        }
+  
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+  
+      .card-container .card {
+        width: 160px;
+        margin: 1% 0%;
+  
+        p:nth-child(2) {
+          font-size: 18px;
+        }
+  
+        i {
+          font-size: 26px;
+        }
+      }
+  
+      .Chart {
+        width: 94%;
+  
+        .line-data {
+          height: 300px;
+        }
+      }
+  
+      .Stats .top-product,
+      .Stats .Schedules {
+        width: 100%;
+        margin: 2%;
+      }
+  
+      .Stats .data1,
+      .Stats .data2 {
+        margin: 1.5% 1%;
+      }
+  
+      .head p:nth-child(2) {
+        font-size: 12px;
+      }
+    }
+  }
+  

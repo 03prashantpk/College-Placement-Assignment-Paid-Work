@@ -1,0 +1,171 @@
+.Courses {
+  .courses-content {
+    padding: 10% 12% 6% 12%;
+    font-family: Poppins, sans-serif;
+
+    h1 {
+      padding-bottom: 30px;
+      animation: popAnimation 0.6s ease;
+      color: #353535;
+      font-size: 3rem;
+    }
+
+    .course {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 60px;
+      .course-card {
+        border-radius: 22px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        width: calc(33.33% - 60px);
+        min-height: 350px;
+        margin-bottom: 30px;
+        position: relative;
+        animation: slideLeftToRight 0.6s ease;
+        border-radius: 22px 22px;
+        @media (max-width: 768px) {
+          width: calc(50% - 30px);
+          margin-bottom: 15px;  
+        }
+
+        @media (max-width: 480px) {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+
+        
+
+        &:hover {
+          transition-duration: 0.3s;
+          box-shadow: #00000029 0px 1px 4px;
+          cursor: pointer;
+          
+        }
+
+        &:hover .course-card-img img {
+          object-position: right;
+          transition-duration: 0.9s;
+        }
+
+        .course-card-img {
+          border-radius: 22px 22px;
+
+          img {
+            width: 100%;
+            min-height: 220px;
+            border-radius: 22px 22px;
+            object-fit: cover;
+            transition-duration: 0.3s;
+            transform: scale(1);
+            transform-origin: center center;
+            object-position: center;
+          }
+        }
+
+        .course-card-content {
+          padding: 20px 15px;
+          color: #04046a;
+          min-height: 180px;
+
+          h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+          }
+
+          p {
+            color: #ff5900;
+            font-size: 0.9rem;
+          }
+        }
+
+        .course-card-footer {
+          position: absolute;
+          bottom: 3%;
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 0px 0px 22px 22px;
+
+          .footer-content {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+            padding: 10px 15px;
+
+            button {
+              background: linear-gradient(
+                90deg,
+                #a6308a 29%,
+                rgb(105, 12, 176) 100%
+              );
+              background-size: 300% 300%;
+              animation: gradientAnimation 4s linear infinite,
+                popAnimation 0.3s ease;
+              color: #fff;
+              border: none;
+              border-radius: 8px;
+              padding: 8px 12px;
+
+              &:hover {
+                background: linear-gradient(
+                90deg,
+                #a6308a 19%,
+                rgb(105, 12, 176) 100%
+              );
+                color: #fff;
+                transition-duration: 0.6s;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes popAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseCircle {
+  from {
+    transform: scale(0.5, 0.5);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1.6, 1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

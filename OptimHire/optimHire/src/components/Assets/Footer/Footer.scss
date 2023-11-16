@@ -1,0 +1,174 @@
+footer {
+    padding: 0.3% 12%;
+    background-color: #f3f6ff;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    p {
+      font-size: 2rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      color: #164fc2;
+    }
+  
+    .developerInfo {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 1%;
+      right: 2%;
+  
+      animation: slideLeftToRight 1s forwards; /* Slide animation */
+  
+      .image-container {
+        background: linear-gradient(45deg, #286eff, #2270dc, #033391);
+        border-radius: 50%;
+        padding: 5px 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+          rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        z-index: 5;
+  
+        &:hover {
+          background: linear-gradient(45deg, #286eff, #033391);
+          cursor: pointer;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+            rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+  
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin: 0 5px;
+        }
+      }
+  
+      .image-container-2 {
+        position: absolute;
+        width: 60px;
+        border-radius: 50%;
+        height: 73%;
+        background-color: #5088f6;
+        z-index: 4;
+        animation: pulseCircle 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+        animation-delay: 1s;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+  
+      .image-container-3 {
+        position: absolute;
+        width: 60px;
+        border-radius: 50%;
+        height: 89%;
+        background-color: #5088f6;
+        z-index: 4;
+        animation: pulseCircle 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+        animation-delay: 2s;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+  
+      .image-container-4 {
+        position: absolute;
+        width: 60px;
+        border-radius: 50%;
+        height: 89%;
+        background-color: #5088f6;
+        z-index: 4;
+        animation: pulseCircle 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+        animation-delay: 3s;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+  
+      .image-container-5 {
+        position: absolute;
+        width: 60px;
+        border-radius: 50%;
+        height: 89%;
+        background-color: #5088f6;
+        z-index: 4;
+        animation: pulseCircle 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+        animation-delay: 4s;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+    }
+  
+    a {
+      text-decoration: none;
+      color: #164fc2;
+      font-size: 18px;
+  
+      &:hover {
+        color: #164fc2;
+      }
+    }
+    span{
+        color: #ff5b00;
+    }
+    .copyright {
+      font-size: 14px;
+      font-weight: normal;
+      padding: 10px 0;
+      color: #434343;
+    }
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+      border-radius: 12px 6px 10px 8px;
+    }
+    50% {
+      background-position: 100% 50%;
+      border-radius: 8px 10px 6px 12px;
+    }
+    100% {
+      background-position: 0% 50%;
+      border-radius: 12px 6px 10px 8px;
+    }
+  }
+  
+  @keyframes popAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pulseCircle {
+    from {
+      transform: scale(0.5, 0.5);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(1.6, 1.6);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideLeftToRight {
+    0% {
+      transform: translateX(-5%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  

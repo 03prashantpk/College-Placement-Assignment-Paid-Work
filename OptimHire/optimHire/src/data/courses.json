@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Master in Business Administration",
+    "instructor": "Prashant Kumar",
+    "courseCount": "31 Course"
+  },
+  {
+    "title": "Master of Computer Application",
+    "instructor": "John Deo",
+    "courseCount": "28 Course"
+  },
+  {
+    "title": "Full Stack Web Development",
+    "instructor": "Kartik Jain",
+    "courseCount": "28 Course"
+  },
+  {
+    "title": "React Development",
+    "instructor": "Prashant Kumar",
+    "courseCount": "16 Course"
+  },  
+  {
+    "title": "Full Stack Web Development",
+    "instructor": "Kartik Jain",
+    "courseCount": "28 Course"
+  },
+  {
+    "title": "React Development",
+    "instructor": "Prashant Kumar",
+    "courseCount": "16 Course"
+  }
+  
+]

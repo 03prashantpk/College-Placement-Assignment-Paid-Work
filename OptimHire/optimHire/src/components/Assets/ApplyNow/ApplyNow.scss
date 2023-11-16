@@ -1,0 +1,101 @@
+.ApplyNow {
+    .acontent {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(19deg, #33045f 27%, #7408c7 100%);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      padding: 1% 0%;
+      font-family: Poppins, sans-serif;
+  
+      .apply-now-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 40px;
+  
+        button {
+          background-color: #fff;
+          color: #33045f;
+          padding: 12px 25px;
+          font-size: 2.6rem;
+          font-weight: 600;
+          border: none;
+          border-radius: 5px;
+          margin: 1% 1% 0.1% 1%;
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+            rgba(17, 17, 26, 0.1) 0px 8px 24px,
+            rgba(17, 17, 26, 0.1) 0px 16px 56px;
+            animation: popIn 0.6s ease-in-out; /* Pop-in animation */
+          &:hover {
+            background-color: #270249;
+            color: #fff;
+            transition-duration: 0.6s;
+            cursor: pointer;
+            box-shadow: none;
+           
+          }
+        }
+      }
+  
+      .scrolling-data {
+        position: absolute;
+        white-space: nowrap;
+        width: 100%;
+        animation: scrollText 25s linear infinite;
+        color: rgba(255, 255, 255, 0.307) !important;
+        opacity: 0.7;
+        transform: translateX(100%);
+        .data {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 470px;
+          color: rgba(255, 255, 255, 0.307) !important;
+        }
+        &.animated {
+          animation: slideSwipe 0.6s ease-in-out; /* Slide swipe animation */
+        }
+      }
+    }
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes popIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideSwipe {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

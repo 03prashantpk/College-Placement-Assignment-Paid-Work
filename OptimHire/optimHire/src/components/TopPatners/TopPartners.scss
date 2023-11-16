@@ -1,0 +1,99 @@
+/* TopPartners.scss */
+
+.TopPartners {
+  padding: 6% 12%;
+  $animationSpeed: 40s;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffe4c4;
+
+  h1 {
+    padding: 20px 0px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .slider {
+    background: #ffe4c4;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Use full width for mobile and tablet */
+
+    &::before,
+    &::after {
+      background: linear-gradient(to right, #ffe4c4 0%, #ffe4c41d 100%);
+      content: "";
+      height: 100px;
+      position: absolute;
+      width: 50%; /* Adjust gradient width for tablet */
+      z-index: 2;
+      @media (max-width: 480px) {
+        background: linear-gradient(to right, #ffe4c400 0%, #ffe4c41d 100%);
+        width: 10%;
+      }
+    }
+
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+    }
+
+    .slide-track {
+      animation: scroll $animationSpeed linear infinite;
+      display: flex;
+      width: calc(250px * 14); /* Adjust based on your slide count */
+    }
+
+    .slide {
+      height: 100px;
+      width: 250px;
+
+      img {
+        height: 100px;
+        width: 250px;
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px); /* Adjust based on your slide count */
+  }
+}
+
+/* Media queries for tablet and mobile */
+@media (max-width: 1024px) {
+  .TopPartners {
+    padding: 6% 5%; /* Adjust padding for tablet */
+
+    .slider {
+      &::before,
+      &::after {
+        width: 100%; /* Use full width for tablet */
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .TopPartners {
+    padding: 6% 3%; /* Adjust padding for mobile */
+
+    .slider {
+      &::before,
+      &::after {
+        width: 100%; /* Use full width for mobile */
+      }
+    }
+  }
+}

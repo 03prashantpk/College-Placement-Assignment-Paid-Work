@@ -1,0 +1,208 @@
+
+.Hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6% 6% 8% 6%;
+    font-family: Poppins, sans-serif;
+    background: linear-gradient(12deg, #ff5900b4, #320857aa),
+      url("../../assets/images/herobg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  
+
+    animation: fadeInUp 1s ease-in-out, slideInFromLeft 1s ease-in-out;
+  
+    h1 {
+      padding: 20px 0px;
+      font-size: 2.6rem;
+      color: #fff;
+  
+     
+      animation: fadeInUp 1s ease-in-out;
+    }
+  
+    .search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+  
+ 
+      animation: slideInFromRight 1s ease-in-out;
+  
+      input {
+        padding: 10px 10px;
+        border: none;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #320857;
+        border-radius: 4px 0 0 4px;
+        font-size: 19px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+        &:focus {
+          outline: none;
+        }
+      }
+  
+      button {
+        padding: 11px 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: #320857;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 19px;
+        border-radius: 0px 4px 4px 0px;
+  
+      
+        animation: fadeIn 1s ease-in-out;
+  
+        i {
+          padding: 0px 10px;
+
+        }
+        
+        &:hover i{
+            transform: rotate(-20deg);transition-duration: 0.4s;
+        }
+       
+      }
+    }
+  
+    .tags {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 30px;
+  
+      p {
+        background-color: #ffffff71;
+        color: #fff;
+        border-radius: 8px;
+        padding: 6px 12px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        animation: fadeIn 2s ease-in-out;
+
+        &:hover {
+          background-color: #ff5900;
+          color: #fff;
+          transition-duration: 0.6s;
+          cursor: pointer;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 4% 4% 6% 4%;
+  
+      h1 {
+        font-size: 2rem;
+      }
+  
+      .search {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        input {
+          width: 100%;
+          margin-bottom: 10px;
+          border-radius: 4px;
+        }
+  
+        button {
+          width: 50%;
+          border-radius: 4px;
+  
+          i {
+            padding: 0px 10px;
+          }
+  
+          &::after {
+            content: "Search";
+          }
+        }
+      }
+    }
+  
+ 
+    @media (max-width: 480px) {
+      padding: 2% 2% 4% 2%;
+  
+      h1 {
+        font-size: 1.8rem;
+      }
+  
+      .search input {
+        width: 100%;
+        padding: 6px 6px;
+        font-size: 16px;
+      }
+  
+      .search button {
+        padding: 10px 12px;
+        font-size: 16px;
+        &::after {
+            content: "Search";
+          }
+      }
+  
+      .tags {
+        gap: 10px;
+      }
+    }
+  }
+  
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

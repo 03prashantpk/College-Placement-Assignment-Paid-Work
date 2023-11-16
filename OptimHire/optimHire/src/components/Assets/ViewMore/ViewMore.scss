@@ -1,0 +1,29 @@
+.View-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+
+  button {
+    background: linear-gradient(15deg, #33045F 29%, #59029b 100%);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    width: 300px;
+    font-size: 34px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+    top: -10%;
+    &:hover {
+      background: linear-gradient(90deg, #a6308a 29%, rgb(105, 12, 176) 100%);
+      color: #fff;
+      box-shadow: none;
+    }
+  }
+}

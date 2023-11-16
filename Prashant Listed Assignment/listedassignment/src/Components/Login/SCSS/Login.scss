@@ -1,0 +1,261 @@
+// Font Variables
+$font-family-montserrat: 'Montserrat';
+$font-family-lato: 'Lato';
+
+// Color Variables
+$color-black: #000;
+$color-white: #fff;
+$color-highlight: #346BD5;
+$color-secondary: #858585;
+$color-bg: #F5F5F5;
+$color-input-bg: #EAEAEA;
+$color-link: #999999;
+$color-highlightBtn: #FFCE56;
+
+.container {
+  display: flex;
+  justify-content: center;
+
+  .card:first-child {
+    width: 36%;
+    min-height: 100vh;
+    background-color: $color-black;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    animation: fulltohalf 1.1s 1 ;
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    span {
+      animation: blink 1s infinite;
+    }
+
+  }
+
+  @keyframes fulltohalf {
+    0%{
+      width: 100%;
+      overflow: hidden;
+      animation-delay: 0.6s;
+    }
+    100%{
+      width: 36%;
+      
+    }
+  }
+  .card:last-child {
+    width: 64%;
+    background-color: $color-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fulltohalfTwo 1.1s 1;
+
+    .login-container {
+      white-space: nowrap;
+      width: 35%;
+
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+        button {
+          font-family: $font-family-montserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          text-align: center;
+          color: $color-secondary;
+          border-radius: 12px;
+          border: none;
+          background-color: $color-white;
+          padding: 6px 14px;
+          display: flex;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          animation: blinkButton 1s 3 1.7s forwards;
+          button:nth-child(1){
+            &:hover{
+              background-color: $color-black;
+              color: $color-bg;
+            }
+          }
+          &:hover {
+            box-shadow: none;
+            cursor: pointer;
+            transition-duration: 0.6s;
+          }
+
+          .icon {
+            width: 16px;
+            height: 17px;
+            margin-right: 4px;
+          }
+        }
+      }
+      
+    @keyframes blinkButton {
+      0% {
+        opacity: 0.6;
+        background-color: $color-highlightBtn;
+        color: $color-black;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+      form {
+        background-color: $color-white;
+        padding: 30px;
+        border-radius: 12px;
+        margin: 20px 0px;
+        font-family: $font-family-montserrat;
+        min-width: 250px;
+
+        .input-group {
+          margin: 14px 0px;
+
+          .label {
+            display: block;
+            margin-bottom: 5px;
+            font-family: $font-family-lato;
+            font-weight: 400;
+            margin: 10px 0px;
+          }
+
+          input {
+            display: block;
+            width: 96%;
+            padding: 6px 8px;
+            font-family: $font-family-lato;
+            font-size: 14px;
+            background-color: $color-input-bg;
+            border: none;
+            margin: 3px 0px;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 7px 0px inset;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          font-family: $font-family-lato;
+          font-style: normal;
+          font-weight: 400;
+          color: $color-highlight;
+          cursor: pointer;
+        }
+
+        button {
+          width: 100%;
+          background-color: $color-black;
+          border: none;
+          color: $color-white;
+          padding: 6px 12px;
+          font-size: 16px;
+          font-family: $font-family-montserrat;
+          border-radius: 8px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+          &:hover {
+            background-color: $color-highlight;
+            color: $color-white;
+            cursor: pointer;
+            transition-duration: 0.6s;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          }
+        }
+      }
+
+      .register {
+        text-align: center;
+        font-family: $font-family-lato;
+        font-size: 14px;
+        color: $color-link;
+
+        span {
+          color: $color-highlight;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @keyframes fulltohalfTwo {
+    0%{
+      width: 0%;
+      display: none;
+      overflow: hidden;
+      transform: scale(0);
+      transform: translateY(-100%);
+    }
+    100%{
+      width: 64%;
+      transform: scale(1);
+      transform: translateY(0%);
+    }
+  }
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+
+    .card:first-child {
+      width: 100%;
+      min-height: auto;
+      font-size: 32px;
+    }
+
+    .card:last-child {
+      width: 100%;
+
+      .login-container {
+        width: 100%;
+        padding: 1% 5%;
+
+        .button-group {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+        }
+
+        form {
+          min-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    .card:last-child {
+      width: 80%;
+      padding: 2%;
+      .login-container {
+        width: 60%;
+
+        form {
+          min-width: 250px;
+        }
+      }
+    }
+  }
+}

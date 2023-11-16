@@ -1,0 +1,177 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 5%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  z-index: 200;
+  animation: fadeInDown 0.5s ease;
+  
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fffffff5;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: fadeInDown 0.5s ease;
+
+    .menu {
+      top: 0;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #242424;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      font-family: Poppins, sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+
+      li {
+        transition-duration: 0.3s;
+        border-bottom: #fff 3px solid;
+        padding: 3px 1px;
+
+        i {
+          padding: 4px;
+        }
+
+        &:hover {
+          color: #FF5B00;
+          cursor: pointer;
+          transform: translateY(-3px);
+          border-bottom: #FF5B00 3px solid;
+        }
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    .bar {
+      width: 30px;
+      height: 3px;
+      background-color: #320857;
+      margin: 3px 0;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &.open {
+    .menu {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    .menu-toggle {
+      position: relative;
+      .bar {
+        transform: rotate(45deg);
+        background-color: #320857;
+        position: absolute;
+        top: 0;
+        right: -5%;
+      }
+      .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .bar:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      img {
+        width: 80%;
+        padding: 10px;
+      }
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      text-align: left;
+      position: absolute;
+      background-color: #320857;
+      top: 60px;
+      color: #fff;
+      left: 0;
+      z-index: 5;
+      padding: 30px;
+      font-weight: 600;
+      animation: slideAnimation 0.3s ease-in-out;
+
+      ul {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        li {
+          border-bottom: #320857 3px solid;
+        }
+      }
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+  }
+
+  /* Tablet Styles (768px - 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .menu {
+      ul {
+        gap: 20px;
+      }
+    }
+  }
+
+  /* Laptop Styles (1025px and above) */
+  @media (min-width: 1025px) {
+    .menu {
+      ul {
+        gap: 40px;
+      }
+    }
+  }
+}
+
+/* Keyframe animation for fading in the Navbar */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframe animation for sliding in the menu */
+@keyframes slideAnimation {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

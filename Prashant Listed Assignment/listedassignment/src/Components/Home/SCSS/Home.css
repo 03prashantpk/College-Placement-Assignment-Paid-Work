@@ -1,0 +1,589 @@
+* {
+  transition-duration: 0.6s;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.home {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main {
+  width: 75%;
+}
+.main .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.main .navbar .right {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-right: 20px;
+}
+.main .navbar .search {
+  background-color: #fff;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-family: "Lato", sans-serif;
+}
+.main .navbar .search:hover i {
+  transform: scale(1.1);
+  transform: rotate(-30deg);
+}
+.main .navbar .search i {
+  color: #9a9a9a;
+}
+.main .navbar .search input {
+  border: none;
+  outline: none;
+}
+.main .navbar .notification {
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+.main .navbar .notification:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.main .navbar .user {
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  align-items: center;
+}
+.main .navbar .user img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.main .navbar .user img:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.main .navbar .user-details {
+  position: fixed;
+  right: 1%;
+  top: 6%;
+  z-index: 2;
+  text-align: center;
+  min-width: 180px;
+  background-color: #1C1D1F;
+  color: #fff;
+  border-radius: 22px;
+  padding: 1% 2%;
+  line-height: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  animation: popIn 0.3s ease-in-out;
+}
+.main .navbar .user-details button {
+  border: none;
+  background-color: #FFCE56;
+  color: #1C1D1F;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.main .navbar .user-details button:hover {
+  background-color: #fff;
+  color: #1C1D1F;
+  cursor: pointer;
+}
+.main .navbar .user-details h5 {
+  text-align: left;
+}
+.main .navbar .user-details .otherUsers {
+  margin-top: 20px;
+  line-height: 22px;
+}
+.main .navbar .user-details .otherUsers .userItem {
+  display: flex;
+  align-items: center;
+}
+.main .navbar .user-details .otherUsers .userItem .userIndex {
+  margin-right: 10px;
+}
+.main .navbar .user-details .otherUsers .userItem .userImage {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.main .navbar .user-details .otherUsers .userItem .userName {
+  font-size: 14px;
+}
+.main .navbar .user-details .name {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFCE56;
+}
+.main .navbar .user-details .email {
+  font-size: 14px;
+  font-weight: 400;
+}
+.main .navbar .user-details img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.main .card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 95%;
+  padding-top: 10px;
+}
+.main .card-container .card {
+  padding: 18px 20px;
+  width: 210px;
+  border-radius: 12px;
+  font-family: "Lato", sans-serif;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  line-height: 12px;
+}
+.main .card-container .card:hover {
+  box-shadow: none;
+}
+.main .card-container .card p:nth-child(2) {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main .card-container .card i {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 30px;
+}
+.main .card-container .card:nth-child(1) {
+  background-color: #DDEFE0;
+}
+.main .card-container .card:nth-child(1):hover i {
+  transform: scale(1.2);
+  color: #FFCE56;
+}
+.main .card-container .card:nth-child(2) {
+  background-color: #F4ECDD;
+}
+.main .card-container .card:nth-child(2):hover i {
+  transform: scale(1.2);
+  color: #FFCE56;
+}
+.main .card-container .card:nth-child(3) {
+  background-color: #EFDADA;
+}
+.main .card-container .card:nth-child(3):hover i {
+  transform: scale(1.2);
+  color: #FFCE56;
+}
+.main .card-container .card:nth-child(4) {
+  background-color: #DEE0EF;
+}
+.main .card-container .card:nth-child(4):hover i {
+  transform: scale(1.2);
+  color: #FFCE56;
+}
+.main .Chart {
+  margin-top: 2%;
+  background-color: #fff;
+  width: 91.5%;
+  padding: 1% 2%;
+  border-radius: 22px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.main .Chart .line-data {
+  height: 400px;
+}
+.main .Chart .head {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main .Chart .head .left {
+  line-height: 10px;
+}
+.main .Chart .head .left p {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.main .Stats {
+  margin: 2% 0%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 95.2%;
+}
+.main .Stats .top-product {
+  background-color: #fff;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+  border-radius: 22px;
+  padding: 2%;
+  width: 45%;
+}
+.main .Stats .Schedules {
+  width: 45%;
+  background-color: #fff;
+  border-radius: 22px;
+  padding: 2%;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+.main .Stats .Schedules .head p:nth-child(2):hover {
+  color: #FFCE56;
+  cursor: pointer;
+}
+.main .Stats .Schedules .data1 {
+  margin: 2.5% 1%;
+  line-height: 4px;
+  border-left: #9BDD7C 4px solid;
+  padding: 1px 10px;
+}
+.main .Stats .Schedules .data1 p:nth-child(1) {
+  color: #666666;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+.main .Stats .Schedules .data1 p:nth-child(2) {
+  color: #999999;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+}
+.main .Stats .Schedules .data1 p:nth-child(3) {
+  color: #999999;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+}
+.main .Stats .Schedules .data2 {
+  margin: 2.5% 1%;
+  line-height: 4px;
+  border-left: #6972C3 4px solid;
+  padding: 1px 10px;
+}
+.main .Stats .Schedules .data2 p:nth-child(1) {
+  color: #666666;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+.main .Stats .Schedules .data2 p:nth-child(2) {
+  color: #999999;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+}
+.main .Stats .Schedules .data2 p:nth-child(3) {
+  color: #999999;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+}
+
+.Chart,
+.Stats,
+.piechart,
+.Schedules,
+.credit {
+  animation: popIn 0.6s ease-in-out;
+}
+
+.home .card {
+  animation: popIn 0.6s ease-in-out;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+select {
+  background-color: #fff;
+  border: none;
+  color: #666666;
+}
+select:hover {
+  color: #242424;
+  cursor: pointer;
+}
+select option {
+  background-color: #242424;
+  color: #fff;
+}
+select option:hover {
+  background-color: #346bd5;
+  color: #1C1D1F;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head p:nth-child(1) {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.head p:nth-child(2) {
+  color: #666666;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+.head p:nth-child(2):hover {
+  cursor: pointer;
+}
+
+.credit {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #878787;
+  line-height: 0px;
+}
+.credit a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive Code for Mobile Devices */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    width: 100%;
+  }
+  @keyframes backgroundChange {
+    0% {
+      background-position: top right;
+      animation-delay: 0.6s;
+    }
+    100% {
+      background-position: top left;
+      animation-delay: 0.6s;
+    }
+  }
+  .main {
+    width: 96%;
+    margin: 2% 4%;
+    background-image: url("https://enally.in/images/bg.png");
+    animation: backgroundChange 30s infinite ease-in-out;
+  }
+  .main .line-data {
+    margin: 1% 4%;
+  }
+  .main .Stats {
+    display: block;
+    margin: 2% 3%;
+  }
+  .main .Stats .top-product {
+    width: 90%;
+    margin: 2% 0%;
+  }
+  .main .Stats .Schedules {
+    width: 90%;
+    margin: 2% 0%;
+  }
+  .main .navbar {
+    padding: 0px 6px;
+  }
+  .main .navbar .right {
+    gap: 10px;
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .card-container .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .navbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .navbar .right {
+    padding-right: 0;
+  }
+  .navbar .search {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .navbar .search input {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1372px) and (min-width: 774px) {
+  .main {
+    width: 65%;
+  }
+  .main .navbar .right {
+    gap: 10px;
+    padding-right: 10px;
+  }
+  .main .navbar .search i {
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  .main .navbar .user img:hover {
+    transform: scale(1);
+  }
+  .main .navbar .user-details {
+    top: 8%;
+    min-width: 150px;
+  }
+  .main .navbar .user-details button {
+    padding: 4px 8px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+  .main .navbar .user-details .otherUsers {
+    margin-top: 15px;
+    line-height: 18px;
+  }
+  .main .navbar .user-details .otherUsers .userItem .userIndex {
+    margin-right: 5px;
+  }
+  .main .navbar .user-details .otherUsers .userItem .userImage {
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+  }
+  .main .navbar .user-details .otherUsers .userItem .userName {
+    font-size: 12px;
+  }
+  .main .navbar .user-details .name {
+    font-size: 15px;
+  }
+  .main .navbar .user-details .email {
+    font-size: 12px;
+  }
+  .main .navbar .user-details img {
+    width: 35px;
+    height: 35px;
+  }
+  .main .card-container .card {
+    width: 160px;
+    margin: 1% 0%;
+  }
+  .main .card-container .card p:nth-child(2) {
+    font-size: 18px;
+  }
+  .main .card-container .card i {
+    font-size: 26px;
+  }
+  .main .Chart {
+    width: 90%;
+  }
+  .main .Chart .line-data {
+    height: 300px;
+  }
+  .main .Stats .top-product,
+  .main .Stats .Schedules {
+    width: 45%;
+  }
+  .main .Stats .data1,
+  .main .Stats .data2 {
+    margin: 1.5% 1%;
+  }
+  .main .head p:nth-child(2) {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 940px) and (min-width: 767px) {
+  .main {
+    width: 55%;
+  }
+  .main .navbar .right {
+    gap: 10px;
+    padding-right: 10px;
+  }
+  .main .navbar .search i {
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  .main .navbar .user img:hover {
+    transform: scale(1);
+  }
+  .main .navbar .user-details {
+    top: 8%;
+    min-width: 150px;
+  }
+  .main .navbar .user-details button {
+    padding: 4px 8px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+  .main .navbar .user-details .otherUsers {
+    margin-top: 15px;
+    line-height: 18px;
+  }
+  .main .navbar .user-details .otherUsers .userItem .userIndex {
+    margin-right: 5px;
+  }
+  .main .navbar .user-details .otherUsers .userItem .userImage {
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+  }
+  .main .navbar .user-details .otherUsers .userItem .userName {
+    font-size: 12px;
+  }
+  .main .navbar .user-details .name {
+    font-size: 15px;
+  }
+  .main .navbar .user-details .email {
+    font-size: 12px;
+  }
+  .main .navbar .user-details img {
+    width: 35px;
+    height: 35px;
+  }
+  .main .card-container .card {
+    width: 160px;
+    margin: 1% 0%;
+  }
+  .main .card-container .card p:nth-child(2) {
+    font-size: 18px;
+  }
+  .main .card-container .card i {
+    font-size: 26px;
+  }
+  .main .Chart {
+    width: 94%;
+  }
+  .main .Chart .line-data {
+    height: 300px;
+  }
+  .main .Stats .top-product,
+  .main .Stats .Schedules {
+    width: 100%;
+    margin: 2%;
+  }
+  .main .Stats .data1,
+  .main .Stats .data2 {
+    margin: 1.5% 1%;
+  }
+  .main .head p:nth-child(2) {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=Home.css.map */

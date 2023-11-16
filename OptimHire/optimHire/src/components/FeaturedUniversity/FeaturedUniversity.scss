@@ -1,0 +1,138 @@
+.FeaturedUniversity {
+  margin-top: 5%;
+  .cont {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    
+  }
+  .controls {
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .controls img {
+    width: 100%;
+    height: auto;
+  }
+ 
+  .FeaturedUniversity-carrousel {
+    width: 1100px;
+    margin: auto;
+    height: 450px;
+    overflow: hidden;
+    @media (max-width: 480px) {
+        width: 380px;
+      }
+  }
+  .controls:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .item {
+    width: 335px;
+    min-height: 400px;
+    @media (max-width: 480px) {
+        width: 300px;
+      }
+    float: left;
+    margin-left: 15px;
+    background-color: #fff;
+    color: #242424;
+    font-size: 40px;
+    border-radius: 22px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: 1s all;
+    .card{
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 22px 22px 0 0;
+        }
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px 12px 0 0;
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        object-position: center;
+      }
+      h3 {
+        font-size: 18px;
+      }
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 8px;
+      min-height: 80px;
+      position: absolute;
+      bottom: 0;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+
+      p {
+        padding: 5px 0px;
+        width: 65%;
+        text-align: justify;
+        font-size: 14px;
+        color: #242424;
+        text-align: start;
+      }
+
+      button {
+        border: none;
+        padding: 8px 10px;
+        background: linear-gradient(to bottom right,#A6308A -15%,rgb(96,66,177)100%);
+        color: #fff;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        @media (max-width: 480px) {
+          padding: 8px 12px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background: linear-gradient(19deg, #33045f 27%, #7408c7 100%);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+ 
+  .FeaturedUniversity-items {
+    width: 12000px;
+    transition: 0.9s all;
+  }
+  .item img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: block;
+    position: auto;
+    top: 50%;
+    left: 0;
+    border-radius: 22px 22px 0 0;
+  }
+}

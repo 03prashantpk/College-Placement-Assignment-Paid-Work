@@ -1,0 +1,167 @@
+.StepsTab {
+    padding: 6% 12%;
+    @media (max-width: 768px) { /* Adjusted for tablet screens */
+      padding: 6%;
+    }
+    background-color: #fff;
+    // background-image: url('https://enally.in/images/cta-3.png');
+    h1, h2 {
+      font-family: "Poppins", sans-serif;
+      animation: slideFromRight 0.6s ease;
+    }
+    h1 {
+      padding: 20px 0px;
+      color: #FF5B00;
+    }
+    .steps-content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-direction: row;
+      @media (max-width: 768px) { /* Adjusted for tablet screens */
+        flex-direction: column;
+      }
+      .left-side {
+        width: calc(55% - 30px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        @media (max-width: 768px) { /* Adjusted for tablet screens */
+          width: 100%;
+        }
+        .step {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 10px;
+          padding: 15px 4px;
+          border-radius: 12px;
+          box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+          border-bottom: #480685 3px solid;
+      
+          &:hover {
+            cursor: pointer;
+          }
+          @media (max-width: 768px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          h2 {
+            width: fit-content;
+            &::after {
+              content: ":";
+            }
+            @media (max-width: 768px) { 
+              &::after {
+                content: " ";
+              }
+            }
+          }
+          p {
+            width: 80%;
+            font-family: "Poppins", sans-serif;
+            @media (max-width: 768px) { 
+              width: 100%;
+            }
+          }
+          &.active {
+            border: 3px solid #fff;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            padding: 15px 4px;
+            background: linear-gradient(19deg, #33045f 27%, #7408c7 100%);
+            animation: SlideUp 0.6s ease;
+            color: #fff;
+            h2 {
+              color: #FF5B00 !important;
+            }
+            
+            h2 {
+              color: #480685;
+            }
+            p {
+              font-size: 17px;
+              text-align: start;
+            }
+          }
+        }
+      }
+      .right-side {
+        width: calc(45% - 30px);
+        overflow: hidden;
+        @media (max-width: 768px) { /* Adjusted for tablet screens */
+          width: 100%;
+        }
+        img {
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 12px;
+          // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          animation: slideRigthToLeft 0.6s ease;
+          // border-bottom: #480685 20px solid;
+          @media (max-width: 768px) { /* Adjusted for tablet screens */
+            width: 100%; /* Adjusted image width */
+            height: auto; /* Maintain aspect ratio */
+          }
+        }
+        .inactive {
+          display: none;
+        }
+        .active {
+          width: 100%;
+        }
+        .controls {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 0;
+          .dot {
+            width: 15px;
+            height: 15px;
+            background-color: #480685;
+            border-radius: 50%;
+            &:hover {
+              cursor: pointer;
+            }
+            &.active {
+              
+              background: linear-gradient(19deg, rgb(115, 2, 135) 27%, #c708bd 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes slideRigthToLeft {
+    0% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes SlideUp {
+    0% {
+      transform: translateY(30%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(-20%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+    

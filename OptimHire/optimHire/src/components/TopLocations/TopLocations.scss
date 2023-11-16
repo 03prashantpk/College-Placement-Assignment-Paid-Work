@@ -1,0 +1,91 @@
+.TopLocations {
+    padding: 6% 12%;
+    @media (max-width: 480px) {
+        padding: 6% 1%;
+      }
+  .grid-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: auto; /* Auto row height to fit content */
+    
+  }
+
+  h1{
+    padding: 20px 0px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .grid-item {
+    padding: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .content {
+    
+    &:nth-child(odd){
+        animation: slideUp1 0.4s; 
+    }
+    &:nth-child(even){
+        animation: slideUp2 0.8s; 
+    }
+
+    position: relative;
+    h2 {
+        animation: pop 0.5s ease;
+      position: absolute;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.674);
+      padding: 8px 10px;
+      text-align: center;
+      color: #fff;
+      top: 50%;
+      text-transform: capitalize;
+      font-family: "Poppins", sans-serif;
+    }
+    img {
+      width: 100%;
+      height: 100%; 
+      object-fit: cover; 
+    }
+  }
+}
+
+@keyframes slideUp1 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp2 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp3 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+@keyframes pop {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1); 
+    }
+  }

@@ -1,0 +1,175 @@
+.StudentsCollage {
+  overflow: hidden;
+  padding: 5% 12%;
+  background: linear-gradient(
+    to bottom right,
+    #a6308a -15%,
+    rgb(96, 66, 177) 100%
+  );
+  font-family: Poppins, sans-serif;
+
+  .collage-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  .students-collage-content {
+    text-align: start;
+
+    h1, h2 {
+      font-size: 5rem;
+      font-weight: 500;
+      color: #fff;
+      margin: 0;
+      animation: SlideUp 0.6s ease;
+    }
+
+    h1 {
+      padding: 30px 0;
+      font-weight: 600;
+      font-size: 6rem;
+    }
+  }
+
+  .student-collage-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+
+  .student-collage-container {
+    overflow-x: hidden;
+  }
+
+  .student-collage-images {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+  }
+
+  .images-per-line {
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+
+    @media (max-width: 480px) {
+      animation: scrolling 15s linear infinite;
+
+      &.center {
+        animation: scrollingRight 15s linear infinite;
+      }
+    }
+  }
+
+  .collage-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+   
+
+    &:nth-child(even) {
+      background-color: #d6f2ff;
+    }
+
+    border-radius: 16px;
+    padding: 10px;
+    padding-bottom: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    @media (max-width: 480px) {
+      box-shadow: none;
+    }
+
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      animation: fadeOut 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    .student {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      padding: 2px;
+      border-radius: 22px;
+    }
+
+    .uni {
+      width: 100px;
+      height: 60px;
+      object-fit: contain;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-1px);
+    }
+  }
+
+  @keyframes SlideUp {
+    0% {
+      transform: translateY(30%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scrollingRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}

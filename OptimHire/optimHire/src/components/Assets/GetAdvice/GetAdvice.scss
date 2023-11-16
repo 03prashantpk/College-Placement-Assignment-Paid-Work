@@ -1,0 +1,83 @@
+.GetAdvice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+
+  .get-advice-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(15deg, #33045f 29%, #6503af 100%);
+    border-radius: 22px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #fff;
+    position: absolute;
+    bottom: 0%;
+    margin-bottom: 2%;
+    width: 100%;
+    padding: 2% 5%;
+    @media (max-width: 480px) {
+      position: relative;
+      padding: 3%;
+      
+    }
+    h1 {
+      padding: 10px;
+      font-size: 3rem;
+      @media (max-width: 480px) {
+        font-size: 2rem;
+      }
+    }
+
+    button {
+      border-radius: 8px;
+      border: none;
+      background-color: #fff;
+      color: #33045f;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 2rem;
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+      }
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #33045f;
+        color: #fff;
+        transition-duration: 0.6s;
+      }
+    }
+  }
+
+  // Keyframe animation
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  // Apply animation
+  animation: slideUp 0.5s ease-in-out;
+
+  // Responsive styles
+  @media screen and (max-width: 768px) {
+    .get-advice-content {
+      flex-direction: column; // Stack elements vertically on smaller screens
+      text-align: center;
+
+      button {
+        margin-top: 10px; // Add space between the button and other elements
+      }
+    }
+  }
+}
