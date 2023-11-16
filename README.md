@@ -49,7 +49,7 @@ Welcome to my placement assignments repository! This repository contains assignm
 
 Hi, I'm Prashant, a passionate developer interested in honing my skills through various programming assignments. I specialize in Java, Python, C/C++, and web development technologies. If you need your assignment done (Paid), feel free to contact me at [Enally Contact](https://enally.in/contact). I'm here to help you excel in your studies!
 
-<center>
+</center>
 
 ## Connect with Me
 
