@@ -1,5 +1,13 @@
 # Placement Assignments Repository
 
+<a href="https://enally.in/contact" target="_blank">
+
+
+![Footer Image](https://raw.githubusercontent.com/03prashantpk/03prashantpk/main/assets/NEED%20HELP.gif)
+
+
+</a>
+
 Welcome to my placement assignments repository! This repository contains assignments for various projects and programming languages, including Python, C++, Java, and more.
 
 ## Project Assignments List
@@ -65,6 +73,10 @@ I have a diverse skill set and can contribute to a wide range of projects. Wheth
 
 #ProgrammingAssignments #CodingSkills #Development #TechEnthusiast #Python #C++ #Java #WebDevelopment #enally #diligentcreator # prashant
 
-## Footer
+<a href="https://enally.in/contact" target="_blank">
+
 
 ![Footer Image](https://raw.githubusercontent.com/03prashantpk/03prashantpk/main/assets/NEED%20HELP.gif)
+
+
+</a>
