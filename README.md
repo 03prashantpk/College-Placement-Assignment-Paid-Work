@@ -43,13 +43,13 @@ Welcome to my placement assignments repository! This repository contains assignm
 
 ## About Me
 
-<center>
+<div style="text-align:center;">
 
 <img src="https://avatars.githubusercontent.com/u/43730425?v=4" width="120px" alt="profile">
 
 Hi, I'm Prashant, a passionate developer interested in honing my skills through various programming assignments. I specialize in Java, Python, C/C++, and web development technologies. If you need your assignment done (Paid), feel free to contact me at [Enally Contact](https://enally.in/contact). I'm here to help you excel in your studies!
 
-</center>
+</div>
 
 ## Connect with Me
 
