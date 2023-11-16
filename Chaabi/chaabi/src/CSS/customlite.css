@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Handlee&family=Patrick+Hand&display=swap");
+body {
+  background-color: #fff;
+  background-position: top right;
+  overflow-x: hidden;
+  background-image: url("../images/theme1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.App {
+  text-align: center;
+  color: #fff;
+}
+.App h1 {
+  color: #060261;
+  font-size: 40px;
+  text-shadow: #335a31 2px 6px 9px;
+  font-family: "Patrick Hand", cursive;
+}
+.App p {
+  color: #335a31;
+  padding: 4px 8px;
+  z-index: 4;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 900;
+  font-size: 17px;
+  animation: zoomIn 0.9s ease-in-out 3s;
+}
+.App p a {
+  color: #060261;
+  text-decoration: none;
+  animation: popIn 1s infinite;
+}
+.App p a:hover {
+  color: #335a31;
+  cursor: pointer;
+}
+.App .keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5% 0%;
+}
+.App .keyboard .keyboard-layout {
+  border-radius: 14px;
+  background: #b0e2ea;
+  box-shadow: -5px -5px 10px rgba(13, 13, 13, 0.137254902), 5px 5px 10px rgba(48, 48, 48, 0.3333333333);
+  background-image: url("../images/heart.png");
+  background-repeat: no-repeat;
+  background-size: 400px;
+  padding: 2% 1%;
+  padding-top: 3%;
+  animation: zoomIn 0.9s ease-in-out;
+}
+.App .keyboard .keyboard-layout .keyboard-row {
+  display: flex;
+  gap: 3px;
+  justify-content: space-around;
+}
+.App .keyboard .keyboard-layout .keyboard-row .key {
+  width: 40px;
+  border-radius: 18px;
+  background-color: #066db1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  padding: 8px;
+  margin: 4px;
+  transition-duration: 0.6s;
+  animation: keyboardGlow 5s infinite ease-in-out;
+  font-family: "Patrick Hand", cursive;
+}
+.App .keyboard .keyboard-layout .keyboard-row .key:hover {
+  background: rgb(3, 17, 85);
+  background: radial-gradient(circle, rgb(178, 140, 248) 20%, rgb(47, 178, 243) 80%);
+  box-shadow: -1px 2px 20px -4px rgba(240, 24, 38, 0.91);
+  cursor: pointer;
+  transition-duration: 0.6s;
+}
+@keyframes keyboardGlow {
+  0% {
+    box-shadow: -1px 2px 20px -2px rgb(214, 255, 10);
+  }
+  20% {
+    box-shadow: -1px 2px 20px -2px rgb(35, 8, 146);
+  }
+  40% {
+    box-shadow: -1px 2px 20px -2px rgb(255, 10, 10);
+  }
+  60% {
+    box-shadow: -1px 2px 20px -2px rgb(10, 255, 124);
+  }
+  80% {
+    box-shadow: -1px 2px 20px -2px rgb(209, 119, 254);
+  }
+  100% {
+    box-shadow: -1px 2px 20px -2px rgb(10, 255, 186);
+  }
+}
+.App .keyboard .keyboard-layout .keyboard-row .space {
+  width: 400px;
+  font-family: "Gochi Hand", cursive;
+}
+.App .keyboard .keyboard-layout .keyboard-row #Tab,
+.App .keyboard .keyboard-layout .keyboard-row #CAPS,
+.App .keyboard .keyboard-layout .keyboard-row #SHIFT,
+.App .keyboard .keyboard-layout .keyboard-row #Enter,
+.App .keyboard .keyboard-layout .keyboard-row #Shift {
+  text-transform: uppercase;
+  width: 100px;
+  padding: 8px 16px;
+}
+.App .keyboard .keyboard-layout .keyboard-row .alt,
+.App .keyboard .keyboard-layout .keyboard-row .ctrl {
+  width: 80px;
+}
+.App .keyboard .keyboard-layout .keyboard-row .profileKey {
+  background-color: #efefef;
+  color: #060261;
+}
+.App .typing-input {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+.App .typing-input input {
+  width: 47%;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-bottom: 1%;
+  font-family: "Patrick Hand", cursive;
+  border: 2px solid #335a31;
+  border-radius: 10px;
+  animation: zoomIn 0.8s ease-in-out;
+}
+.App .typing-input input:focus {
+  outline: none;
+}
+.App .show-words {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  animation: zoomIn 1.2s ease-in-out;
+}
+.App .show-words .word {
+  color: #242424;
+  width: 10%;
+  padding: 10px 15px;
+  margin: 1% 2%;
+  font-size: 40px;
+  font-family: "Patrick Hand", cursive;
+  letter-spacing: 4px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+}
+.App .alert {
+  display: block;
+  align-items: center;
+  margin-left: 4%;
+  animation: zoomIn 0.9s ease-in-out;
+}
+.App .alert div {
+  margin: 1% 1%;
+  width: 10%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 13px;
+  border-radius: 13px;
+  background: #b9bda5;
+  color: #000;
+  font-weight: 900;
+  box-shadow: -5px -5px 10px rgba(13, 13, 13, 0.137254902), 5px 5px 10px rgba(48, 48, 48, 0.3333333333);
+}
+.App .alert .correct span:nth-child(1) {
+  padding: 0% 2%;
+  font-weight: 900;
+  color: green;
+  font-size: 24px;
+}
+.App .alert .correct span:nth-child(2) {
+  padding: 0% 2%;
+  font-weight: 900;
+  color: red;
+  font-size: 24px;
+}
+.App .clear-record {
+  border-radius: 14px;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #060261;
+  margin: 8px;
+  position: absolute;
+  top: 50.5%;
+  right: 16%;
+  animation: zoomIn 0.9s ease-in-out;
+}
+.App .clear-record:hover {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgb(178, 140, 248) 20%, rgb(47, 178, 243) 80%);
+  box-shadow: -1px 2px 28px -4px rgba(240, 24, 38, 0.91);
+  cursor: pointer;
+  transition-duration: 0.6s;
+}
+.App .key-events {
+  position: absolute;
+  top: 31%;
+  right: 12.5%;
+  padding: 4px 8px;
+  z-index: 4;
+  transform: rotate(22deg);
+  font-family: "Gochi Hand", cursive;
+  color: #1a1a1a;
+  font-weight: 900;
+}
+.App .stickey {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  width: 23%;
+  transform: rotate(22deg);
+}
+.App .stats {
+  position: absolute;
+  top: 21%;
+  right: 10.5%;
+  color: #335a31;
+  z-index: 2;
+  transform: rotate(22deg);
+  text-align: left;
+  font-family: "Handlee", cursive;
+  line-height: 2em;
+}
+.App div {
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes popIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=customlite.css.map */

@@ -1,0 +1,25 @@
+{
+  "name": "reunion-assignment",
+  "version": "1.0.0",
+  "description": "social media api",
+  "main": " /api/",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "addLater"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "ritik",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.4.0",
+    "mongoose": "^7.1.0",
+    "nodemon": "^2.0.22"
+  }
+}

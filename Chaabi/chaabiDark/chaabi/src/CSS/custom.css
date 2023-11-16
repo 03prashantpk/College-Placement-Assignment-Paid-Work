@@ -1,0 +1,320 @@
+.App {
+  text-align: center;
+  color: #fff;
+}
+.App p {
+  padding: 4px 8px;
+  z-index: 4;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 900;
+  font-size: 17px;
+  animation: glowText 2s infinite ease-in-out;
+}
+.App p a {
+  color: #fff;
+  text-decoration: none;
+  animation: popIn 1s infinite;
+}
+.App p a:hover {
+  color: #335a31;
+  cursor: pointer;
+}
+.App .keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1% 0%;
+}
+.App .keyboard .keyboard-layout {
+  border-radius: 14px;
+  background: #1c1c1c;
+  box-shadow: -5px -5px 10px #0d0d0d, 5px 5px 10px #303030;
+  background-image: url("../images/neonkey.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2% 1%;
+  animation: zoomIn 1.2s ease-in-out;
+}
+.App .keyboard .keyboard-layout .keyboard-row {
+  display: flex;
+  gap: 3px;
+  justify-content: space-evenly;
+}
+.App .keyboard .keyboard-layout .keyboard-row .key {
+  width: 50px;
+  border-radius: 8px;
+  background-color: #000;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  padding: 8px;
+  margin: 4px;
+  transition-duration: 0.6s;
+  animation: keyboardGlow 5s infinite ease-in-out;
+}
+.App .keyboard .keyboard-layout .keyboard-row .key:hover {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgb(91, 118, 253) 0%, rgb(249, 100, 130) 80%);
+  box-shadow: -1px 2px 28px -4px rgba(240, 24, 38, 0.91);
+  cursor: pointer;
+  transition-duration: 0.6s;
+}
+.App .keyboard .keyboard-layout .keyboard-row .space {
+  width: 400px;
+}
+.App .keyboard .keyboard-layout .keyboard-row #Tab,
+.App .keyboard .keyboard-layout .keyboard-row #CAPS,
+.App .keyboard .keyboard-layout .keyboard-row #SHIFT,
+.App .keyboard .keyboard-layout .keyboard-row #Enter,
+.App .keyboard .keyboard-layout .keyboard-row #Shift {
+  text-transform: uppercase;
+  width: 100px;
+  padding: 8px 16px;
+}
+.App .keyboard .keyboard-layout .keyboard-row .alt,
+.App .keyboard .keyboard-layout .keyboard-row .ctrl {
+  width: 80px;
+}
+.App .keyboard .keyboard-layout .keyboard-row .profile {
+  animation: keyboardGlowText 2s infinite;
+}
+@keyframes keyboardGlowText {
+  0% {
+    color: rgb(10, 47, 255);
+    box-shadow: -1px 2px 22px -2px rgb(10, 47, 255);
+  }
+  10% {
+    color: rgb(10, 255, 43);
+    box-shadow: -1px 2px 22px -2px rgb(10, 255, 43);
+  }
+  20% {
+    color: rgb(10, 255, 226);
+    box-shadow: -1px 2px 22px -2px rgb(10, 255, 226);
+  }
+  30% {
+    color: rgb(214, 255, 10);
+    box-shadow: -1px 2px 22px -2px rgb(214, 255, 10);
+  }
+  40% {
+    color: rgb(247, 10, 255);
+    box-shadow: -1px 2px 22px -2px rgb(247, 10, 255);
+  }
+  50% {
+    color: rgb(10, 202, 255);
+    box-shadow: -1px 2px 22px -2px rgb(10, 202, 255);
+  }
+  60% {
+    color: rgb(35, 8, 146);
+    box-shadow: -1px 2px 22px -2px rgb(35, 8, 146);
+  }
+  70% {
+    color: rgb(255, 10, 10);
+    box-shadow: -1px 2px 22px -2px rgb(255, 10, 10);
+  }
+  80% {
+    color: rgb(10, 255, 124);
+    box-shadow: -1px 2px 22px -2px rgb(10, 255, 124);
+  }
+  90% {
+    color: rgb(246, 230, 127);
+    box-shadow: -1px 2px 22px -2px rgb(246, 230, 127);
+  }
+  100% {
+    color: rgb(209, 119, 254);
+    box-shadow: -1px 2px 22px -2px rgb(209, 119, 254);
+  }
+}
+.App .typing-input {
+  display: flex;
+  justify-content: center;
+}
+.App .typing-input input {
+  width: 47%;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-bottom: 2%;
+  border: 2px #fff solid;
+  border-radius: 4px;
+  animation: keyboardGlow 2.5s infinite ease-in-out;
+  background-color: #313131;
+  color: #f1f1f1;
+}
+.App .typing-input input:focus {
+  outline: none;
+}
+.App .show-words {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .show-words .word {
+  color: #f1f1f1;
+  width: 10%;
+  padding: 10px 15px;
+  margin: 1% 2%;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+}
+.App .alert {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.App .alert div {
+  margin: 1% 1%;
+  width: 10%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 1%;
+  border-radius: 13px;
+  background: #222222;
+  box-shadow: -12px -12px 10px #1a1a1a, 12px 12px 15px #242424;
+  border-radius: 13px;
+  background: #222222;
+  animation: zoomIn 1.8s ease-in-out;
+}
+.App .alert .correct span {
+  padding: 0% 2%;
+  font-weight: 900;
+  color: green;
+  font-size: 24px;
+}
+.App .alert .wrong span {
+  padding: 0% 2%;
+  font-weight: 900;
+  color: red;
+  font-size: 24px;
+}
+.App .alert .error span {
+  padding: 0% 2%;
+  font-weight: 900;
+  color: rgb(0, 225, 255);
+  font-size: 24px;
+}
+.App .wire {
+  position: absolute;
+  top: 16%;
+  right: -14%;
+  width: 40%;
+  z-index: -1;
+  animation: wire 5s infinite ease-in-out;
+}
+.App .clear-record {
+  border-radius: 14px;
+  background: linear-gradient(315deg, #3a3a3a, #313131);
+  box-shadow: -5px -5px 9px #1c1c1c, 5px 5px 9px #505050;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: #f1f1f1;
+  margin: 8px;
+}
+.App .clear-record:hover {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgb(91, 118, 253) 0%, rgb(249, 100, 130) 80%);
+  box-shadow: -1px 2px 28px -4px rgba(240, 24, 38, 0.91);
+  cursor: pointer;
+  transition-duration: 0.6s;
+}
+
+div {
+  animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    text-shadow: rgba(255, 255, 255, 0.4274509804) 2px 2px 4px;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: rgba(228, 206, 8, 0.7529411765) 2px 2px 4px;
+  }
+}
+@keyframes keyboardGlow {
+  0% {
+    box-shadow: -1px 2px 22px -2px rgb(10, 47, 255);
+  }
+  10% {
+    box-shadow: -1px 2px 22px -2px rgb(10, 255, 43);
+  }
+  20% {
+    box-shadow: -1px 2px 22px -2px rgb(10, 255, 226);
+  }
+  30% {
+    box-shadow: -1px 2px 22px -2px rgb(214, 255, 10);
+  }
+  40% {
+    box-shadow: -1px 2px 22px -2px rgb(247, 10, 255);
+  }
+  50% {
+    box-shadow: -1px 2px 22px -2px rgb(10, 202, 255);
+  }
+  60% {
+    box-shadow: -1px 2px 22px -2px rgb(35, 8, 146);
+  }
+  70% {
+    box-shadow: -1px 2px 22px -2px rgb(255, 10, 10);
+  }
+  80% {
+    box-shadow: -1px 2px 22px -2px rgb(10, 255, 124);
+  }
+  90% {
+    box-shadow: -1px 2px 22px -2px rgb(246, 230, 127);
+  }
+  100% {
+    box-shadow: -1px 2px 22px -2px rgb(209, 119, 254);
+  }
+}
+@keyframes glowText {
+  0% {
+    color: rgb(10, 47, 255);
+  }
+  10% {
+    color: rgb(10, 255, 43);
+  }
+  20% {
+    color: rgb(10, 255, 226);
+  }
+  30% {
+    color: rgb(214, 255, 10);
+  }
+  40% {
+    color: rgb(247, 10, 255);
+  }
+  50% {
+    color: rgb(10, 202, 255);
+  }
+  60% {
+    color: rgb(35, 8, 146);
+  }
+  70% {
+    color: rgb(255, 10, 10);
+  }
+  80% {
+    color: rgb(10, 255, 124);
+  }
+  90% {
+    color: rgb(246, 230, 127);
+  }
+  100% {
+    color: rgb(209, 119, 254);
+  }
+}/*# sourceMappingURL=custom.css.map */

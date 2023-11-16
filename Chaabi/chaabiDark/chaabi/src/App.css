@@ -1,0 +1,10 @@
+body{
+  background-color: #222222;
+  background-image: url('./images/dark.gif');
+  background-position: top center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.App{
+  margin-top: 1%;
+}

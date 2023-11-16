@@ -1,0 +1,44 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Distribution directories
+dist/
+out/
+build/
+
+# Local environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Log files
+*.log
+logs/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# IDE files
+.idea/
+
+# User-specific files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

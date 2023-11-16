@@ -1,0 +1,17 @@
+.login-container {
+  width: 100%;
+
+  .top {
+    text-align: center;
+  }
+
+  .login-row {
+    height: 100vh;
+  }
+
+  .login-col {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px 30px;
+    border-radius: 8px;
+  }
+}
