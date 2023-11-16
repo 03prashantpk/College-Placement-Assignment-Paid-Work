@@ -6,7 +6,7 @@ Welcome to my placement assignments repository! This repository contains assignm
 
 - Chaabi
 - Erusu Consultants
-- TERRIBLY TINY TALESTC
+- TERRIBLY TINY TALES - May 2023
 - zeeve
 - Listed.inc - Gmail Project
 - MyWays
@@ -16,6 +16,7 @@ Welcome to my placement assignments repository! This repository contains assignm
 - PROEDGE
 - Python Project
 - Reunion Assignment
+- TERRIBLY TINY TALES - DEC 2023
 
 ## I can work on these languages as of now.
 
@@ -66,4 +67,4 @@ I have a diverse skill set and can contribute to a wide range of projects. Wheth
 
 ## Footer
 
-![Footer Image](https://github.com/03prashantpk/03prashantpk/raw/main/assets/footer2.png)
+![Footer Image](https://raw.githubusercontent.com/03prashantpk/03prashantpk/main/assets/NEED%20HELP.gif)

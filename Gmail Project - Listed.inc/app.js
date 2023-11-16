@@ -2,10 +2,10 @@ const { google } = require('googleapis');
 const { OAuth2Client } = require('google-auth-library');
 const moment = require('moment');
 
-const CLIENT_ID = '101065144727451182408';
-const CLIENT_SECRET = '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';
-const REDIRECT_URI = 'https://enally.in';
-const AUTH_KEY = "AIzaSyCInZ9mZ-2Mf_d0q1vc6SKnvKGxBdYav1w"
+const CLIENT_ID = '';
+const CLIENT_SECRET = '';
+const REDIRECT_URI = '';
+const AUTH_KEY = ""
 
 const oauth2Client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 
