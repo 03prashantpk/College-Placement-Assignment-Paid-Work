@@ -5,27 +5,16 @@ Welcome to my placement assignments repository! This repository contains assignm
 ## Project Assignments List
 
 - Chaabi
-
 - Erusu Consultants
-
 - TERRIBLY TINY TALESTC
-
 - zeeve
-
-- Listed.inc -  Gmail Project
-
+- Listed.inc - Gmail Project
 - MyWays
-
 - MywaysBackend
-
 - OptimHire
-
 - Prashant Listed Assignment
-
 - PROEDGE
-
 - Python Project
-
 - Reunion Assignment
 
 ## I can work on these languages as of now.
@@ -49,15 +38,23 @@ Welcome to my placement assignments repository! This repository contains assignm
 ### Databases I can work on
 
 - SQL
-- Mongodb
-- PHP file handling (For Temprory database)
+- MongoDB
+- PHP file handling (For Temporary database)
 
+## About Me
 
-# About Me
+![Profile Image](https://avatars.githubusercontent.com/u/43730425?v=4=120x120)
 
-![Profile Image](https://avatars.githubusercontent.com/u/43730425?v=4)
+Hi, I'm Prashant, a passionate developer interested in honing my skills through various programming assignments. I specialize in Java, Python, C/C++, and web development technologies. If you need your assignment done (Paid), feel free to contact me at [Enally Contact](https://enally.in/contact). I'm here to help you excel in your studies!
 
-Hi, I'm Prashant, a passionate developer interested in honing my skills through various programming assignments. If you need your assignment done (Paid), feel free to contact me at [Enally Contact](https://enally.in/contact). I'm here to help you excel in your studies!
+## Connect with Me
+
+- Instagram: [prashantpkumar](https://www.instagram.com/prashantpkumar/)
+- LinkedIn: [03prashantpk](https://www.linkedin.com/in/03prashantpk)
+
+## More Information
+
+I have a diverse skill set and can contribute to a wide range of projects. Whether you need assistance with Java, Python, web development, or databases, I'm ready to tackle the challenge. Feel free to explore my assignments and reach out for any inquiries or collaborations.
 
 ## Promotional Tags
 
