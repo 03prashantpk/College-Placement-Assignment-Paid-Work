@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+.credit{
+    text-align: center;
+    font-size: 0.8rem;
+    color: #EE574C;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    animation: smoothBlink 2s infinite;
+    font-family: "Mukta",sans-serif;
+}
+
+.credit:hover::after {
+    content: "👋🏻 Prashant Kumar @03prashantpk";
+    cursor: pointer;
+}
+
+@keyframes smoothBlink {
+    0% {
+        opacity: 0.2;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
