@@ -24,6 +24,7 @@ const App = () => {
     localStorage.setItem('token', token);
     setLoggedIn(true);
   };
+  
 
   const logout = () => {
     localStorage.removeItem('token');
