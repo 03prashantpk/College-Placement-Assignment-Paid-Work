@@ -19,6 +19,7 @@ const App = () => {
     return !!storedToken;
   };
 
+
   const login = () => {
     const token = 'your-authentication-token';
     localStorage.setItem('token', token);
