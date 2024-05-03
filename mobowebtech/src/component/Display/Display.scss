@@ -1,0 +1,55 @@
+.Display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(69, 69, 69, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.8px);
+  -webkit-backdrop-filter: blur(10.8px);
+  border: 1px solid rgba(230, 230, 230, 0.218);
+  height: calc(75vh);
+  width: 70%;
+  padding: 20px 10px;
+  
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 1rem;
+    
+  }
+
+  // medium
+  @media screen and (max-width: 1024px) {
+    width: 68%;
+  }
+
+  h3{
+    color: #fff;
+    font-size: 1rem;
+    margin: 1rem 0rem 0;
+    
+  }
+  pre {
+    color: #fff;
+    font-size: 1rem;
+    margin: 1rem 0rem 0;
+    width: 100%;
+    height: calc(75vh - 2.3rem);
+    overflow: scroll;
+    // custom scrollbar
+    &::-webkit-scrollbar {
+      width: 12px; /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: orange; /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: blue; /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+      border: 3px solid orange; /* creates padding around scroll thumb */
+    }
+  }
+}

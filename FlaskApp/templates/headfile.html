@@ -1,0 +1,68 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="https://enally.in/images/new/logoenally.png">
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://i.postimg.cc/9MGRh5kj/wallaper.jpg');
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(9px);
+        min-height: 100vh;
+        animation: bganimation 20s infinite ease-in-out;
+    }
+
+    /* Footer styles */
+    footer {
+
+        color: #fff;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba(26, 26, 26, 0.45);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(16.4px);
+        -webkit-backdrop-filter: blur(16.4px);
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 767px) {
+            footer {
+                position: relative;
+                margin-top: 4%;
+            }
+        }
+
+        @media screen and (max-width: 468px) {
+            footer {
+                position: relative;
+                margin-top: 4%;
+            }
+        }
+
+        @keyframes bganimation {
+
+            0%{
+                background-position: top;
+            }
+            50%{
+                background-position: center;
+
+            }
+            100%{
+                background-position: bottom;
+            }
+            
+        }
+</style>
+

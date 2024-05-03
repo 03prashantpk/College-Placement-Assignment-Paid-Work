@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science and Statistics - Enally.in</title>
+    {% include "headfile.html" %}
+    <style>
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 767px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 468px) {
+            .container {
+                flex-direction: column ;
+            }
+        }
+
+        .card {
+            width: 22%;
+            padding: 30px 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.31);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20.2px);
+            -webkit-backdrop-filter: blur(20.2px);
+        }
+
+        @media screen and (max-width: 767px) {
+            .card {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 468px) {
+            .card {
+                width: 80%;
+            }
+        }
+
+
+
+        .card a {
+            text-decoration: none;
+            color: #fffcfcbf;
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 4px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            color: #fff;
+            padding-top: 2%;
+            margin-bottom: 5%;
+        }
+
+        h2 {
+            text-transform: capitalize;
+            color: #fff;
+        }
+
+        .youtube {
+            background-color: #FF0000;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        Data Science and Statistics
+    </h1>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://imageio.forbes.com/specials-images/imageserve/6501b86f58ec578e535e700f/Automation-data-analytic-with-robot-and-digital-visualization-for-big-data-scientist/960x0.jpg"
+                alt="">
+            <h2>Linear regression</h2>
+            <p>Calculate regression line, coefficients, and equation for sample data; also determine regression line of T on X.</p>
+            <a href="lor" target="_blank">View on GitHub</a>
+            <div class="buttons">
+                <div class="buttons">
+                    <button class="button" onclick="window.location.href='/lor'">Run <i class="fas fa-cogs"></i></button>
+                    <button class="youtube">YouTube <i class="fab fa-youtube"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.esri.com/content/dam/esrisites/en-us/about/what-is-gis/assets/image-switcher-maps/monitor-change-what-is-gis-image-switcher.jpg"
+                alt="">
+            <h2>Correlation Heatmap</h2>
+            <p>
+                A visualization technique illustrating correlation values between variables as a heatmap representation accurately.</p>
+            <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+            <div class="buttons">
+                <div class="buttons">
+                    <button class="button">Run </button>
+                    <button class="youtube">YouTube <i class="fab fa-youtube"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.postimg.cc/bvdwr4N4/Whats-App-Image-2024-02-22-at-19-25-01-4fd83d3c.jpg" alt="">
+            <h2>Self Driving Mobility Device</h2>
+            <p>
+                OpenCV-driven self-driving car uses computer vision to navigate, detect lanes, obstacles, and traffic signs in real-time.</p>
+            <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+            <div class="buttons">
+                <div class="buttons">
+                    <button class="button">Run</button>
+                    <button class="youtube">YouTube <i class="fab fa-youtube"></i></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    {% include "footer.html" %}
+</body>
+
+</html>

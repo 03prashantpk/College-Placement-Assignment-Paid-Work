@@ -1,0 +1,142 @@
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0.5rem;
+  background: rgba(69, 69, 69, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(230, 230, 230, 0.218);
+  height: calc(75vh);
+  width: 26%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 1rem;
+    height: 100%;
+    
+  }
+
+  // medium screen
+  @media screen and (max-width: 1024px) {
+   
+    overflow-y: scroll;
+  }
+
+  .user h3,
+  .response h3,
+  .form_select h3 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 1rem 0rem 0;
+  }
+  .response {
+    input{
+      width: 100%;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0;
+      border: none;
+      font-size: 0.7rem;
+      background: rgba(69, 69, 69, 0.434);
+      border-radius: 8px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5.8px);
+      color: #fff;
+      &:focus {
+        outline: none;
+      }
+    }
+    select {
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0;
+      border: none;
+      width: 100%;
+      font-size: 0.7rem;
+      background: rgba(69, 69, 69, 0.434);
+      border-radius: 8px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5.8px);
+      color: #fff;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .form,
+  .form_select {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0;
+      border: none;
+      font-size: 0.7rem;
+      background: rgba(69, 69, 69, 0.434);
+      border-radius: 8px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5.8px);
+      color: #fff;
+      &:focus {
+        outline: none;
+      }
+    }
+    textarea {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0;
+      border: none;
+      font-size: 0.7rem;
+      background: rgba(69, 69, 69, 0.434);
+      border-radius: 8px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5.8px);
+      max-height: 80px;
+      max-width: 100%;
+      color: #fff;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      background: #308aff;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      width: 100%;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        background: #1271ee;
+      }
+    }
+  }
+
+  .form_select {
+    .insights-btn {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+      flex-wrap: wrap;
+      gap: 5px;
+      button {
+        background: rgba(40, 40, 40, 0.29);
+        border-radius: 8px;
+        width: fit-content;
+        font-size: 11px;
+        font-weight: normal;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.9px);
+        -webkit-backdrop-filter: blur(7.9px);
+        border: 1px solid rgba(84, 84, 84, 0.03);
+      }
+    }
+  }
+}

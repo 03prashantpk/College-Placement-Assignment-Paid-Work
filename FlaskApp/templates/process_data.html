@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+    {% include "headfile.html" %}
+    <title>Linear Regression - Data Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 95%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1b1b1b;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .container-inner {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .excel-table {
+            width: 80%;
+            height: 500px;
+            overflow-y: scroll;
+        }
+
+        @media screen and (max-width: 767px) {
+            .container-inner {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 468px) {
+            .container-inner {
+                flex-direction: column;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #555;
+        }
+
+        th {
+            background-color: #444;
+        }
+
+        tr:hover {
+            background-color: #555;
+        }
+
+        .chart-container {
+            text-align: center;
+            animation: scaleIn 1s ease-in-out;
+        }
+
+        .download-form {
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        input[type="text"],
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #032346;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button {
+            background-color: #0056b3;
+        }
+
+        input[type="text"]:focus,
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        input {
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+       
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Excel Data</h2>
+    <div class="container">
+
+
+        <div class="container-inner">
+
+            <div class="excel-table">
+
+                {{ table | safe }}
+            </div>
+
+
+            <div class="chart-container">
+                <h2>Line Of Regression</h2>
+                <img src="data:image/png;base64,{{ barchart }}" alt="Bar Chart">
+            </div>
+        </div>
+
+
+        <form class="download-form" action="/download_combined_excel" method="post" enctype="multipart/form-data">
+            <input type="text" name="excel_path" value="{{ excel_path }}" hidden>
+            <input type="text" name="name" placeholder="Enter your name">
+            <button type="submit">Download <i class="fad fa-download"></i></button>
+        </form>
+    </div>
+
+
+    {% include "footer.html" %}
+</body>
+
+</html>
