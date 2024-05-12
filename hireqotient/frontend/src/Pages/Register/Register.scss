@@ -1,0 +1,66 @@
+.Register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+
+    .register-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 2rem;
+        width: 30%;
+        padding: 2% 5%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+        h2{
+            color: #1A58D6;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        input{
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #1A58D6;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button{
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #1A58D6;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+
+            &:hover{
+                background-color: #FFD700;
+            }
+        }
+
+        p{
+            margin-top: 1rem;
+            color: #1A58D6;
+            font-size: 1rem;
+            cursor: pointer;
+
+            a{
+                text-decoration: none;
+                color: #1A58D6;
+                font-weight: 600;
+            }
+        }
+    }
+}

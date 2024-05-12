@@ -1,0 +1,41 @@
+.Main-Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1A58D6;
+    padding: 8px 2%;
+
+    h2{
+        color: white;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        margin-right: 1rem;
+
+        li{
+            margin: 0 1rem;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            
+            a{
+                text-decoration: none;
+                color: white;
+                &:hover{
+                    color: #FFD700;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+
