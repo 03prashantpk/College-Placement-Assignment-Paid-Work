@@ -29,6 +29,9 @@ const registerRouter = require('./routers/auth');
 app.use(registerRouter);
 
 
+
+
+
 // Protected route
 const verifyToken = require('./middlewares/verifyToken');
 
