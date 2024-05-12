@@ -36,7 +36,7 @@ const Register = () => {
             console.error('Error registering:', error);
             setResponseMessage('Error registering');
         }
-    };
+    };  
 
     return (
         <div className="Register">

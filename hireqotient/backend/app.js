@@ -25,11 +25,13 @@ app.get('/', function(req, res) {
 });
 
 // Register router
-const registerRouter = require('./routers/register');
-app.use('/register', registerRouter);
+const registerRouter = require('./routers/auth');
+app.use(registerRouter);
+
 
 // Protected route
 const verifyToken = require('./middlewares/verifyToken');
+
 app.get('/protected', verifyToken, (req, res) => {
     res.json({ message: 'Protected route', user: req.user });
 });
