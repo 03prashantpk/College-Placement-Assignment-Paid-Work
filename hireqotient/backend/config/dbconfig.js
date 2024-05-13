@@ -1,9 +1,9 @@
 // config.js
 const { MongoClient } = require("mongodb");
 
-const username = "kgaurav1173";
-const password = "qO8i00lQztkg8yF6";
-const cluster = "cluster0.dzfoa3f.mongodb.net";
+const username = "**************";
+const password = "***************";
+const cluster = "**************";
 const database = "Assignment";
 
 const dbConnectionFn = async () => {
