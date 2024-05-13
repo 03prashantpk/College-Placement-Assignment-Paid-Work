@@ -20,6 +20,11 @@ Welcome to my placement assignments repository! This repository contains assignm
 - Python Project
 - Reunion Assignment
 - TERRIBLY TINY TALES - DEC 2023
+- Zeeve
+- OptimHire
+- DealsDray - incomplete
+- Mojo Web Technology
+- HireQotient
 
 ## I can work on these languages as of now.
 
